@@ -30,10 +30,7 @@ header {
     background-color: rgb(132, 99, 75);
     text-align: center;
 }
+
 main {
-    max-width: 800px;
-    margin: 50px auto;
-}
-p {
-    margin-top: 20px;
+    .image-div: inline-block;
 }
