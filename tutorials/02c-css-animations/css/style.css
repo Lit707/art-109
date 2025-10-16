@@ -1,0 +1,119 @@
+body {
+    animation: change-color 10s infinite alternate;
+}
+
+@keyframes change-color {
+    0% {background-color: antiquewhite;}
+    50% {background-color: yellow;}
+    100% {background-color: aquamarine;}
+} 
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 80px auto;
+    animation: skew 3s infinite alternate;
+}
+
+@keyframes skew {
+    0% {transform: skew(0deg, 0deg);}
+    100% {transform: skew(30deg, 20deg);}
+}
+
+.square {
+    background-color: orangered;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 50px auto;
+    transition: all 1s;
+}
+
+.square:hover{
+    background-color:greenyellow;
+    transform: rotate(30deg);
+}
+.button-div{
+    text-align: center;
+}
+.button {
+    color: white;
+    background-color: green;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display:inline-block;
+    transition: all .5s
+}
+.button:hover {
+    background-color: greenyellow;
+    color: black;
+    transform: scale(1.5);
+}
+
+.loading{
+    background-color: green;
+    animation: stretch 5s 3 normal; 
+    width: 80vw;
+
+}
+
+@keyframes stretch {
+    0% {width: 100px;}
+    100% {width: 80vw;}
+}
+
+.pentagon {
+    background-color: aqua;
+    position: absolute;
+    top: 200px;
+    left:150px;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.pentagon:hover {
+    background-color: blanchedalmond;
+    width: 400px;
+    height: 400px;
+    transform: rotate(180deg)
+}
+
+.heart {
+    background-color: red;
+    position: absolute;
+    top: 200px;
+    right: 150px;
+    height: 150px;
+    width: 150px;
+    transform: rotate( -45deg);
+    animation: pulse 1s ease infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 150px;
+    position: absolute;
+    width:150px;
+}
+
+.heart:before {
+    top: -75px;
+    left: 0;
+}
+
+.heart:after {
+    left: 75px;
+    top: 0;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
